@@ -87,8 +87,8 @@ public:
   virtual std::string getSerialNumber() = 0;
   virtual std::string getFirmwareVersion() = 0;
 
-  virtual Freenect2Device::ColorCameraParams getColorCameraParams() = 0;
-  virtual Freenect2Device::IrCameraParams getIrCameraParams() = 0;
+  virtual Freenect2Device::ColorCameraParams* getColorCameraParams() = 0;
+  virtual Freenect2Device::IrCameraParams* getIrCameraParams() = 0;
   virtual void setColorCameraParams(const Freenect2Device::ColorCameraParams &params) = 0;
   virtual void setIrCameraParams(const Freenect2Device::IrCameraParams &params) = 0;
 

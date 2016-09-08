@@ -80,7 +80,7 @@ int ofProtonect::openKinect(string serial){
       ofLogVerbose("ofProtonect::openKinect") << "device serial: " << dev->getSerialNumber();
       ofLogVerbose("ofProtonect::openKinect") << "device firmware: " << dev->getFirmwareVersion();
 
-      registration = new libfreenect2::Registration(dev->getIrCameraParams(), dev->getColorCameraParams());
+      registration = new libfreenect2::Registration(*dev->getIrCameraParams(), *dev->getColorCameraParams());
 
     bOpened = true;
     
